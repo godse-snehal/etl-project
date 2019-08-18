@@ -1,3 +1,4 @@
+DROP TABLE goodreads;
 CREATE TABLE goodreads (
 	book_id INT Primary Key,
 	title TEXT,
@@ -8,13 +9,19 @@ CREATE TABLE goodreads (
 	text_reviews_count INT
 );
 
-ALTER TABLE goodreads 
-DROP COLUMN authors;
+DROP TABLE amazon;
+CREATE TABLE amazon (
+	book_id INT Primary Key,
+    title TEXT,
+	authors TEXT,
+	avg_rating DECIMAL,
+	ratings_count INT
+	);
 
-ALTER TABLE goodreads
-ADD COLUMN authors VARCHAR(250);
 
-DROP TABLE goodreads;
+SELECT * FROM amazon;
+
+SELECT * FROM goodreads;
 
 
 
